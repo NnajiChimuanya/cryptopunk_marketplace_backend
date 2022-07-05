@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 
 app.get("/getNfts", async (req, res) => {
   let data = await axios.get(
-    "https://testnets-api.opensea.io/assets?asset_contract_address=0xE3320a32f3c5959845C6A39b3B0d29D869A8F968&order_direction=desc"
+    "https://testnets-api.opensea.io/assets?asset_contract_address=0xE3320a32f3c5959845C6A39b3B0d29D869A8F968"
   );
   res.status(200).json(data.data.assets);
 });
